@@ -12,6 +12,18 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
+@keyframes bounceOrig {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: translate(-50%, -25%);
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+  }
+
+
 body {
     font-family: "Acme", serif;
 
@@ -99,10 +111,7 @@ input, form {
     background-color: #F2C4B6;
 }
 
-.actual-content {
-    margin-left: 16rem;
-    height: 100vh;
-}
+
 
 .a-logout {
     margin-top: 21rem;
@@ -135,9 +144,62 @@ a:active {
     opacity: 50%;
 }
 
+.actual-content {
+    margin-left: 16rem;
+    height: 100vh;
+    position: relative;
+}
+
 .actual-content .title-card {
     width: 32rem;
     height: 8rem;
     border-radius: 1rem;
-    background-color: #121212;
+    background-color: #e9575f;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 2px 1px 1px black;
+}
+
+.actual-content .title-card h2 {
+    padding-top: 2rem;
+    color: #ffffff;
+}
+
+.actual-content .title-card h4 {
+    padding-top: 1rem;
+    color: #e5e5e5;
+    opacity: 70%;
+}
+
+.actual-content .course-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #e9575f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 1px 1px black;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    color: white;
+}
+
+.actual-content .course-card:hover, .actual-content .course-card:focus {
+    cursor: pointer;
+    animation-name: bounceOrig;
+    -moz-animation-name: bounceOrig;
+}
+
+.actual-content .course-card img{
+    width: 8rem;
 }
