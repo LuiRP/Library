@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="side-menu">
+        <h1>Codex</h1>
+        <div class="sidebar-element" id="Aprender">
+            <img src="/static/icons/book.png" alt="">   
+            <form class="btn-a" action="{{url_for('aprender')}}">
+                <input type="submit" value="Aprender" />
+            </form>
+        </div>
+        <div class="sidebar-element" id="Comunidad" >
+            <img src="/static/icons/handshake.png" alt="">
+            <form class="btn-a" action="{{url_for('comunidad')}}">
+                <input type="submit" value="Comunidad" />
+            </form>
+        </div>
+        <div class="sidebar-element" id="Mi Perfil">
+            <img src="/static/icons/id-card.png" alt=""> 
+            <form class="btn-a" action="{{url_for('mi_perfil')}}">
+                <input type="submit" value="Mi Perfil" />
+            </form>
+        </div>
+        <div class="a-logout">
+            <a href="{{url_for('logout')}}">Cerrar Sesion</a>
+        </div>
+        <div class="sidebar-element streak" >
+            <img src="/static/icons/peace-day.png" alt="">
+            <h2>000</h2>
+        </div>
+    </div>
+    <div class="actual-content">
+        {% block body %}
+        {% endblock %}
+    </div>
+    <script>
+        let selected_div = document.getElementById(String(document.title));
+        selected_div.classList.add('sidebar-element-selected');
+
+        const divs = document.querySelectorAll('.sidebar-element');
+        divs.forEach(div => {
+        div.addEventListener('click', function() {
+            const form = div.querySelector('form');
+            form.submit();
+        });
+        });
+    </script>
+</body>
+</html>
