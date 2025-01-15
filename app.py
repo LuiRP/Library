@@ -99,6 +99,18 @@ def comunidad():
 def mi_perfil():
     return render_template('mi_perfil.html')
 
+@app.route('/course', methods=['GET','POST'])
+def course():
+    return render_template('course.html')
+
+@app.route('/course2', methods=['GET','POST'])
+def course2():
+    return render_template('course2.html')
+
+@app.route('/course3', methods=['GET','POST'])
+def course3():
+    return render_template('course3.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

@@ -120,25 +120,25 @@ input, form {
     margin-bottom: 1rem;
 }
 
-a:link {
+.a-logout a:link {
     text-decoration: none;
     color: #121212;
     opacity: 50%;
 }
 
-a:visited {
+.a-logout a:visited {
     text-decoration: none;
     color: #121212;
     opacity: 50%;
 }
 
-a:hover {
+.a-logout a:hover {
     text-decoration: none;
     color: #121212;
     opacity: 100%;
 }
 
-a:active {
+.a-logout a:active {
     text-decoration: none;
     color: #121212;
     opacity: 50%;
@@ -160,7 +160,7 @@ a:active {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    box-shadow: 2px 1px 1px black;
+    
 }
 
 .actual-content .title-card h2 {
@@ -202,4 +202,49 @@ a:active {
 
 .actual-content .course-card img{
     width: 8rem;
+}
+
+.actual-content .subtitle-card {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #e9575f;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+.btn-b {
+    border-radius: 1rem;
+    background-color: #e9575f;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-b:hover, .btn-b:focus {
+    background-color: #ef7077;
+}
+
+.btn-b input {
+    padding: 1rem;
+}
+
+.green {
+    background-color: #7acb4d !important;
+}
+
+.blue {
+    background-color: #8993be !important;
+}
+
+.black {
+    background-color: #4d4d4d !important;
 }

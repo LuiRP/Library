@@ -1,0 +1,20 @@
+{% extends 'dashboard.html' %}
+
+{% block head %}
+<title>Aprender</title>
+{% endblock %}
+
+{% block body %}
+    <div class="subtitle-card green">
+        <h4>HTML, CSS, JavaScript</h3>
+    </div>
+
+    <div class="course-card green">
+        <a href="/static/Gran_Libro_HTML5_CSS3_Javascript.pdf"><img src="/static/icons/htmlcssjs.png" alt=""></a>
+    </div>
+
+    <form class="btn-b" action="{{url_for('course2')}}">
+        <input type="submit" value="Siguiente" />
+    </form>
+
+{% endblock %}

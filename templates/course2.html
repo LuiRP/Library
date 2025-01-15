@@ -1,0 +1,20 @@
+{% extends 'dashboard.html' %}
+
+{% block head %}
+<title>Aprender</title>
+{% endblock %}
+
+{% block body %}
+    <div class="subtitle-card basics blue">
+        <h4>PHP</h3>
+    </div>
+
+    <div class="course-card blue">
+        <a href="/static/PHP Libro.pdf"><img src="/static/icons/php.png" alt=""></a>
+    </div>
+
+    <form class="btn-b" action="{{url_for('course3')}}">
+        <input type="submit" value="Siguiente" />
+    </form>
+
+{% endblock %}
